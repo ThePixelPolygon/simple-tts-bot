@@ -1,0 +1,14 @@
+{
+  "command_descriptions": {
+    "start": "Starts the TTS bot in your current voice channel.",
+    "stop": "Disconnects the TTS bot."
+  },
+  "connect_successful": "Now connected to %{channel}.",
+  "disconnect": {
+    "manual": "Now disconnecting from %{channel}.",
+    "auto": "All users disconnected from %{channel}. Now automatically disconnecting."
+  },
+  "errors": {
+    "not_in_vc": "You aren't in a voice channel. Please join a voice channel and try again."
+  }
+}
