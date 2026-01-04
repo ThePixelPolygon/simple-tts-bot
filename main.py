@@ -60,7 +60,7 @@ async def on_voice_state_update(member, before, after):
         await member.guild.voice_client.disconnect()
 
 
-@bot.tree.command(name="start", description=i18n.t("command_descriptions.start"))
+@bot.tree.command(name="start", description="Starts the TTS bot in your current voice channel.")
 async def start_command(interaction: discord.Interaction):
     if interaction.user.voice is None:
         await interaction.response.send_message(i18n.t("errors.not_in_vc"), ephemeral=True)
@@ -72,7 +72,7 @@ async def start_command(interaction: discord.Interaction):
                                             ephemeral=False)
 
 
-@bot.tree.command(name="stop", description="command_descriptions.stop")
+@bot.tree.command(name="stop", description="Disconnects the TTS bot.")
 async def stop_command(interaction: discord.Interaction):
     if interaction.guild.voice_client:
         await interaction.response.send_message(i18n.t("disconnect.manual",
